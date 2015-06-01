@@ -1,6 +1,6 @@
 <launch>
   <!-- Start the GSCAM node -->
-  <env name = "GSCAM_CONFIG" value = "v4l2src device=/dev/video0 ! video/x-raw-rgb,framerate=25/1 ! ffmpegcolorspace" />
+  <env name = "GSCAM_CONFIG" value = "souphttpsrc location=http://192.168.254.1:8090/?action=stream ! jpegdec ! ffmpegcolorspace" />
   <node pkg = "gscam" type = "gscam" name = "web_cam">
     <param name = "camera_name" value = "web_cam" />
     <remap from = "camera/image_raw" to = "camera/visible/image" />
