@@ -47,15 +47,15 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate messages in the 'msg' folder
  add_message_files(
    FILES
-   #hello.msg
-   #hold_depth.msg
+   navdata.msg
    rovstatus.msg
+   motortarget.msg
  )
 
 ## Generate services in the 'srv' folder
  add_service_files(
    FILES
-   AddTwoInts.srv
+   #AddTwoInts.srv
  )
 
 ## Generate actions in the 'action' folder
